@@ -1,0 +1,15 @@
+service: movi-app-backend
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs22.x
+  region: ap-south-1
+  stage: ${opt:stage, 'dev'}
+
+functions:
+  api:
+    handler: lambda.handler
+    events:
+      - httpApi: '*'      # <-- this line makes Serverless create the API Gateway
+    timeout: 29

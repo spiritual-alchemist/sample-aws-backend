@@ -1,0 +1,16 @@
+{
+  "name": "movi-app-backend",
+  "version": "1.0.0",
+  "description": "Movi backend",
+  "scripts": {
+    "deploy:dev": "serverless deploy --stage=dev",
+    "deploy:production": "serverless deploy --stage=production"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "serverless": "^3.40.0"
+  }
+}
