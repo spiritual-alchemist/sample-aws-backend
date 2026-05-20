@@ -1,7 +1,7 @@
 {
-  "name": "movi-app-backend",
+  "name": "app-backend",
   "version": "1.0.0",
-  "description": "Movi backend",
+  "description": "App backend",
   "scripts": {
     "deploy:dev": "serverless deploy --stage=dev",
     "deploy:production": "serverless deploy --stage=production"
