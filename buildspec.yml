@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - npm ci || npm install
+  build:
+    commands:
+      - npx serverless deploy --stage=dev
+
+# CodeBuild runs this. It uses the CodeBuild IAM role for AWS access
+# (no access keys needed). serverless deploy creates/updates the Lambda + API Gateway.
