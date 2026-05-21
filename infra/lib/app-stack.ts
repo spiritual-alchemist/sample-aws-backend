@@ -2,7 +2,7 @@ import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 
-/** Mv's own infra: a single S3 bucket, tagged app=mv. (filter test: infra change SHOULD trigger) */
+/** Mv's own infra: a single S3 bucket, tagged app=mv. (filter test v2: fresh infra push) */
 export class AppStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
