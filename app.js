@@ -4,12 +4,12 @@ const app = express();
 
 // Health check — no auth, no DB, returns static 200
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'ok', service: 'app-backend' });
+  res.status(200).json({ status: 'ok', service: 'mv-app-backend' });
 });
 
 // Root, just so hitting the base URL says something
 app.get('/', (req, res) => {
-  res.status(200).json({ message: 'app-backend is running' });
+  res.status(200).json({ message: 'mv-app-backend is running' });
 });
 
 module.exports = app;

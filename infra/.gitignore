@@ -1,0 +1,7 @@
+# CDK / node — generated or installed, never commit
+node_modules
+cdk.out
+.cdk.staging
+# ts-node runs the .ts directly; ignore any compiled output
+*.js
+*.d.ts

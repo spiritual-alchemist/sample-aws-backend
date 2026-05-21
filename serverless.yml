@@ -1,11 +1,25 @@
-service: movi-app-backend
+service: mv-app-backend
 frameworkVersion: '3'
+
+# Keep the CDK project (infra/) OUT of the Lambda deployment zip.
+# Serverless bundles the whole service dir by default, and infra/node_modules
+# (aws-cdk-lib) is hundreds of MB the Lambda never needs at runtime.
+package:
+  patterns:
+    - '!infra/**'
 
 provider:
   name: aws
   runtime: nodejs22.x
   region: ap-south-1
   stage: ${opt:stage, 'dev'}
+  stackTags:                 # CloudFormation stamps these on every resource it creates
+    app: mv
+    env: ${sls:stage}
+    managed-by: serverless
+  tags:                      # also applied directly to the Lambda functions
+    app: mv
+    env: ${sls:stage}
 
 functions:
   api:

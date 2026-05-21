@@ -1,0 +1,21 @@
+{
+  "name": "mv-app-infra",
+  "version": "1.0.0",
+  "description": "CDK app for Mv Lambda + API Gateway",
+  "bin": {
+    "mv-app-infra": "bin/app.js"
+  },
+  "scripts": {
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "aws-cdk": "^2.150.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.0"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.150.0",
+    "constructs": "^10.3.0"
+  }
+}
